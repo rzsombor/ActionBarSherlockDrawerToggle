@@ -7,8 +7,6 @@ This is an implementation of the ActionBarDrawerToggle class that can be used wi
 
 The library and a demo project is supplied.
 
-[Compiled demo app](demo/demo-compiled/ActionBarSherlockDrawerToggleDemo.apk)
-
 Screenshots from the demo app:
 
 ![Screenshot1](https://raw.github.com/rzsombor/ActionBarSherlockDrawerToggle/master/screenshots/phone_closed_android_2.3.png)
