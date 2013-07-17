@@ -3,7 +3,9 @@ ActionBarSherlockDrawerToggle
 
 ActionBarDrawerToggle for ActionBarSherlock
 
-This is an implementation of the ActionBarDrawerToggle class that can be used with ActionBarSherlock 4.3.1.
+This is an implementation of the ActionBarDrawerToggle class that can be used with ActionBarSherlock 4.3.1. The drawer indicator icon displays and animates properly.
+
+The library and a demo project is supplied.
 
 Screenshots from the demo app:
 
