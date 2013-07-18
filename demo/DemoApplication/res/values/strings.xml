@@ -4,5 +4,9 @@
     <string name="app_name">Drawer Toggle Demo</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="menu_title_whats_this">What\'s this?</string>
+    <string name="menu_title_git_this">Git this!</string>
+    <string name="dialog_title_what">What\'s this?</string>
+    <string name="dialog_content_what">This is an implementation of the ActionBarDrawerToggle class that can be used with ActionBarSherlock 4.3.1.\n\nThe drawer indicator icon displays and animates properly.\n\nCheck out the GitHub page.</string>
 
 </resources>

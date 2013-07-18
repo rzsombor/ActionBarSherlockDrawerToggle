@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_what"
+        android:showAsAction="never"
+        android:title="@string/menu_title_whats_this">
+    </item>
+
+    <item
+        android:id="@+id/menu_git"
+        android:showAsAction="never"
+        android:title="@string/menu_title_git_this">
+    </item>
+
+</menu>

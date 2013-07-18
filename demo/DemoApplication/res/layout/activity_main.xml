@@ -37,25 +37,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dip"
-                android:text="Awesome function" />
+                android:text="Sadly" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dip"
-                android:text="You better press this" />
+                android:text="These" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dip"
-                android:text="Pancakes" />
+                android:text="Buttons" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dip"
-                android:text="Dezső" />
+                android:text="Do" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dip"
+                android:text="Nothing" />
         </LinearLayout>
     </ScrollView>
 

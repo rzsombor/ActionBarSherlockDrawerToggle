@@ -1,6 +1,8 @@
 package hu.scythe.actionbarsherlockdrawertoggledemo;
 
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.DrawerLayout.DrawerListener;
@@ -8,6 +10,7 @@ import android.view.View;
 
 import com.actionbarsherlock.app.ActionBarSherlockDrawerToggle;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 
 public class MainActivity extends SherlockFragmentActivity {
@@ -21,14 +24,13 @@ public class MainActivity extends SherlockFragmentActivity {
 		setContentView(R.layout.activity_main);
 
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		
+
 		drawerLayout = (DrawerLayout) findViewById(R.id.DrawerLayout);
 
 		drawerToggle = new ActionBarSherlockDrawerToggle(this, drawerLayout,
 				R.drawable.ic_navigation_drawer, R.string.app_name,
 				R.string.app_name);
 		drawerToggle.setDrawerIndicatorEnabled(true);
-		
 
 		drawerLayout.setDrawerListener(new DrawerListener() {
 			@Override
@@ -52,11 +54,11 @@ public class MainActivity extends SherlockFragmentActivity {
 			}
 		});
 	}
-	
+
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
-		
+
 		drawerToggle.syncState();
 	}
 
@@ -69,7 +71,26 @@ public class MainActivity extends SherlockFragmentActivity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		return drawerToggle.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+		case R.id.menu_git:
+			Intent i = new Intent(Intent.ACTION_VIEW);
+			i.setData(Uri.parse("https://github.com/rzsombor/ActionBarSherlockDrawerToggle"));
+			startActivity(i);
+			return true;
+		case R.id.menu_what:
+			WhatDialog d = new WhatDialog();
+			d.show(getSupportFragmentManager(), WhatDialog.TAG);
+			return true;
+		default:
+			return drawerToggle.onOptionsItemSelected(item);
+		}
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getSupportMenuInflater().inflate(R.menu.menu_main, menu);
+
+		return true;
 	}
 
 }
